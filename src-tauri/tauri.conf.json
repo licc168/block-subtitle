@@ -1,0 +1,57 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "block-subtitle",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "app": {
+        "all": true
+      },
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "show": true,
+        "hide": true,
+        "all": false,
+        "close": true,
+        "maximize": true,
+        "minimize": true,
+        "startDragging": true
+      }    },
+    "windows": [
+      {
+        "title": "block-subtitle",
+        "width": 800,
+        "height": 100,
+        "decorations":false,
+        "transparent":true,
+        "alwaysOnTop": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.dev",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    }
+  }
+}
